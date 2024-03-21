@@ -1,0 +1,153 @@
+.consultationItem {
+    border: none;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+.consultationItemBlue {
+    border: 1px white solid;
+    background: rgba(19, 52, 87, 0.7);
+}
+.consultationItemBlueError {
+    opacity: 0.5;
+    background: #0f1d45;
+}
+.consultationItemWhite > .consultationTitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 123%;
+    color: #07305d;
+}
+.consultationTitle {
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    line-height: 123%;
+    color: var(--color-white);
+    margin: 0;
+    padding: 24px;
+}
+.consultationTitleMinSize {
+    font-weight: 600;
+    font-size: 0;
+    line-height: 123%;
+    color: var(--color-white);
+    margin: 0;
+    padding: 0;
+}
+
+.consultationTitleCall {
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    line-height: 123%;
+    color: var(--color-white);
+    margin: 0;
+    padding: 24px;
+}
+.consultationTitleBlueBtn {
+    border: none;
+    border-left: 1px solid var(--color-white);
+    width: 68px;
+    height: 100%;
+    background: rgba(19, 52, 87, 0.7);
+    position: relative;
+    cursor: pointer;
+}
+.consultationButton {
+    border: none;
+    border-left: 1px solid var(--color-white);
+    width: 68px;
+    height: 100%;
+    background: rgba(19, 52, 87, 0.7);
+    position: relative;
+    cursor: pointer;
+}
+.consultationItemWhite > .consultationButton {
+    border-left: 2px rgb(0, 0, 0) solid;
+    background: rgba(251, 251, 251, 0.7);
+}
+.consultationItemWhite > .consultationButton::before {
+    content: '';
+    display: block;
+    background: url('../../images/btnprytemplate.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.consultationItemBlue > .consultationButton::before {
+    content: '';
+    display: block;
+    background: url('../../images/btnprytemplateWhite.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.consultationButton:hover::before {
+    transform: rotate(-10deg) scale(1.3);
+    transition: transform 0.3s ease;
+}
+@media screen and (max-width: 1460px) {
+    .consultationTitleCall {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 123%;
+        color: var(--color-white);
+        margin: 0;
+        padding: 17px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .consultationTitle {
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .consultationTitleMinSize {
+        font-size: 10px;
+        padding: 9px 8px 9px 8px;
+    }
+    .consultationItemWhite > .consultationTitle {
+        font-size: 0;
+    }
+    .consultationItemWhite > .consultationTitleMinSize {
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 123%;
+        color: #07305d;
+    }
+    .consultationItemWhite > .consultationButton::before {
+        width: 11px;
+        height: 11px;
+        background-size: 11px 11px;
+        right: 5px;
+        bottom: 5px;
+    }
+
+    .consultationItemBlue > .consultationButton::before {
+        width: 11px;
+        height: 11px;
+        background-size: 11px 11px;
+        right: 5px;
+        bottom: 5px;
+    }
+    .consultationTitleBlueBtn {
+        width: 27px;
+    }
+    .consultationButton {
+        width: 27px;
+    }
+}

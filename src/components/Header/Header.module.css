@@ -1,0 +1,142 @@
+li {
+    list-style: none;
+}
+.logo {
+    background-image: url('../../images/logo.svg');
+    width: 170px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+.mentorHeader {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    margin: 0 15vw;
+}
+
+.link {
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 123%;
+    color: var(--color-white);
+    transition: color 0.5s ease;
+}
+.link:hover {
+    transition: color 0.5s ease;
+    color: rgb(82, 125, 244);
+    cursor: pointer;
+}
+.headerList {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+.phoneWraper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.phone {
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    line-height: 123%;
+    letter-spacing: 0.02em;
+    color: var(--color-white);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.phone:hover {
+    color: rgb(82, 125, 244);
+    transition: color 0.5s ease;
+}
+.phoneIcon {
+    background-image: url('../../images/group-1321313978.svg');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.navBar {
+    display: flex;
+}
+.navBarShow {
+    display: flex;
+}
+.showMenu {
+    background-image: url('../../images/menu.svg');
+    background-repeat: no-repeat;
+    background-size: 41px 41px;
+    width: 41px;
+    height: 41px;
+    cursor: pointer;
+}
+.openNavBar {
+    position: fixed;
+    display: flex;
+    padding: 140px 20px 0px 50px;
+    z-index: 22;
+    top: 0;
+    margin: 0;
+    width: 50%;
+    height: 100vh;
+    gap: 30px;
+    background: #0f1d45;
+    flex-direction: column;
+}
+.closeMenu {
+    border: none;
+    background: none;
+    background-image: url('../../images/CloseBtnX.svg');
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 30px;
+    background-size: 31px 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 140px;
+}
+
+@media screen and (max-width: 1500px) {
+    .navBar {
+        display: none;
+    }
+    .phone {
+        font-size: 0;
+    }
+}
+@media screen and (min-width: 1500px) {
+    .closeMenu {
+        display: none;
+    }
+    .showMenu {
+        display: none;
+    }
+}
+@media screen and (max-width: 615px) {
+    .mentorHeader {
+        width: 90%;
+    }
+    .logo {
+        width: 96px;
+        height: 20px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .mentorHeader {
+        margin: 0 5vw;
+        padding-top: 30px;
+        width: 90%;
+    }
+}

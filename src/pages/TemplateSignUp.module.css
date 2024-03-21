@@ -1,0 +1,125 @@
+.mentorImg {
+    display: flex;
+    background-image: url('../images/mentor-22x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 166px;
+    height: 780px;
+    left: calc(65%);
+    width: calc(25% + 25px);
+    object-fit: contain;
+}
+
+.statistic {
+    position: relative;
+    display: flex;
+    margin: 112px 0 43px 0;
+    gap: 230px;
+}
+
+.statisticTitle {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 141%;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-bottom: 32px;
+}
+.statisticSubTitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 123%;
+    text-transform: lowercase;
+    color: var(--color-gray-200);
+    max-width: 75%;
+}
+.statisticWraper {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(255, 255, 255, 0.61);
+    padding-left: 24px;
+}
+
+.popup {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 40;
+    background: #0f1d45;
+    width: 34%;
+    transition: all 0.5s cubic-bezier(0.82, 1.14, 0.93, 1.17);
+}
+.closePopup {
+    width: 0%;
+    display: table-column;
+}
+.statisticSubTitleMiniSize {
+    font-size: 0;
+}
+@media screen and (max-width: 1660px) {
+    .mentorImg {
+        top: 140px;
+    }
+}
+@media screen and (max-width: 1540px) {
+    .mentorImg {
+        position: fixed;
+        height: 780px;
+        width: 100%;
+
+        top: 125px;
+        left: 70%;
+    }
+}
+@media screen and (max-width: 1460px) {
+    .statistic {
+        position: relative;
+        display: flex;
+        margin: 70px 0 43px 0;
+        gap: 145px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .mentorImg {
+        left: 60%;
+    }
+    .statistic {
+        gap: 45px;
+    }
+    .popup {
+        width: 405px;
+    }
+}
+@media screen and (max-width: 615px) {
+    .mentorImg {
+        left: 45%;
+        width: 275px;
+        height: 432px;
+        top: 190px;
+    }
+    .statisticSubTitle {
+        font-size: 0;
+    }
+    .statisticSubTitleMiniSize {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 123%;
+        text-transform: lowercase;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .statisticTitle {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    .statistic {
+        gap: 45px;
+        z-index: 30;
+    }
+    .popup {
+        width: 321px;
+    }
+}
