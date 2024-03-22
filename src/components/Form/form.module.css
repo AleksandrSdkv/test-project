@@ -4,6 +4,23 @@
     line-height: 149%;
     color: var(--color-white);
 }
+.popupTitleApplication {
+    width: 50%;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 149%;
+    color: var(--color-white);
+    align-self: center;
+}
+.popupSubtitle {
+    width: 88%;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 145%;
+    text-align: center;
+    color: #fff;
+    align-self: center;
+}
 .form {
     display: flex;
     flex-direction: column;
@@ -109,9 +126,21 @@
         line-height: 149%;
         color: var(--color-white);
     }
+    .popupSubtitle {
+        font-size: 30px;
+    }
+    .popupTitleApplication {
+        font-size: 30px;
+    }
 }
 @media screen and (max-width: 700px) {
     .input {
         margin-bottom: 10px;
+    }
+    .popupSubtitle {
+        font-size: 30px;
+    }
+    .popupTitleApplication {
+        font-size: 30px;
     }
 }

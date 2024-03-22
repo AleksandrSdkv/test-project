@@ -15,6 +15,7 @@ const TemplateSignUp: FunctionComponent = () => {
     const [loading, setLoading] = useState(false);
     const { valute } = useGetStatistic();
     const [isShowPopup, setIsshowPopup] = useState(false);
+    const [isDoneApplication, setIsDoneApplication] = useState(false);
 
     // Получает данные с курса валют
     let GBP = Math.round(valute?.GBP?.Value);
@@ -24,22 +25,18 @@ const TemplateSignUp: FunctionComponent = () => {
         setLoading(true);
     }
 
-    function handlerClosePopup(e: any) {
-        // Отвечает за открытие бокового меню, закрывается по нажатию "на паранжу"
-        if (e.target.className === backgroundClass) {
-            setIsshowPopup(!isShowPopup);
-        }
-    }
     function handlerTogglePopup(e: any) {
         setIsshowPopup(!isShowPopup);
+        setIsDoneApplication(true);
     }
+    
     setTimeout(preloaderPage, 500);
     return (
         <>
             {!loading ? (
                 <Background isShow={isShowPopup} />
             ) : (
-                <section onClick={(e) => handlerClosePopup(e)}>
+                <section>
                     <Background isShow={isShowPopup} />
                     <Header />
                     <div
@@ -47,7 +44,11 @@ const TemplateSignUp: FunctionComponent = () => {
                             !isShowPopup ? styles.closePopup : styles.popup
                         }
                     >
-                        <LoginForm handlerTogglePopup={handlerTogglePopup} />
+                        <LoginForm
+                            handlerTogglePopup={handlerTogglePopup}
+                            isDoneApplication={isDoneApplication}
+                            setIsDoneApplication={setIsDoneApplication}
+                        />
                     </div>
                     <div className={consultationStyles.titleWraper}>
                         <Consultation handlerTogglePopup={handlerTogglePopup} />
